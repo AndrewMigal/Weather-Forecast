@@ -5,12 +5,12 @@ body {
 #wrapper {
     max-width: 1500px;
     margin: auto;
+    line-height: 0;
 }
 
 #bg {
     position: relative;
     margin: 0;
-    margin-bottom: -4px;
 }
 
 header {
@@ -56,8 +56,7 @@ header {
     font-family: ThinHelvetica;
     color: #ffffff;
     font-size: 159.99px;
-    font-weight: 100;
-    bottom: -18%;
+    bottom: 0%;
     left: 12%;
 }
 
@@ -68,7 +67,7 @@ header {
     font-size: 72.01px;
     text-align: center;
     font-weight: normal;
-    top: 10%;
+    top: 25%;
     left: 45%;
     text-align: center;
 }
@@ -79,7 +78,6 @@ header {
     color: #ffffff;
     font-size: 47.99px;
     font-weight: 100;
-    line-height: 37.5px;
     bottom: 20%;
     left: 45%;
 }
@@ -111,17 +109,14 @@ header {
     font-family: ThinHelvetica;
     color: #ffffff;
     font-size: 30px;
-    top: -5%;
     left: 33%;
 }
 
 #date {
-    top: 10%;
+    margin: 100px;
     font-family: ThinHelvetica;
     color: #227e9c;
     font-size: 160.01px;
-    font-weight: 100;
-    margin: 0;
     text-align: center;
 }
 
@@ -129,17 +124,14 @@ header {
     font-family: HelveticaCyr300;
     color: #1f7998;
     font-size: 48px;
-    font-weight: 300;
-    line-height: 37.5px;
     text-align: center;
-    margin: 0;
+    margin: 50px;
 }
 
 #today {
     font-family: HelveticaCyr;
     color: rgba(230, 74, 25, 0.7);
     font-size: 18px;
-    line-height: 37.5px;
     text-align: center;
     margin-top: 6px;
 }
@@ -200,24 +192,20 @@ hr {
 
 #time_of_day .daytimes {
     display: inline-block;
-    line-height: 85px;
     margin-right: 50px;
     margin-left: 150px;
     margin-top: 50px;
 }
 
-
-
 .daytimes>p {
     font-family: ThinHelvetica;
     color: #3b484d;
     font-size: 48px;
-    line-height: 20px;
-/*
+    /*
     text-align: left;
 */
 }
 
 .p_img {
     display: inline;
-} 
+}
