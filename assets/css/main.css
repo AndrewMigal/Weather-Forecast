@@ -190,14 +190,28 @@ hr {
     color: #023b5b;
 }
 
-#time_of_day .daytimes {
-    display: inline-block;
+/*#time_of_day .daytimes {
+   
     margin-right: 50px;
+    margin-left: 150px;
+    margin-top: 50px;
+}*/
+
+#daytimes_inline article{
+    display: inline-block;
+    margin-right: 80px;
     margin-left: 150px;
     margin-top: 50px;
 }
 
-.daytimes>p {
+#daytimes_inline section{
+    display: inline-block;
+    margin-left: 135px;
+    margin-right: 50px;
+    
+}
+
+.daytimes {
     font-family: ThinHelvetica;
     color: #3b484d;
     font-size: 48px;
