@@ -88,39 +88,90 @@ header {
     top: 25%;
 }
 
-#calendar {
-    margin-top: 10%;
-    background-image: url(../img/bg.png);
+#slider {
+    position: relative;
+    right: -100%;
+    bottom: 0%;
+}
+
+#slider {
     width: 340px;
     height: 357px;
-    position: absolute;
+    overflow: hidden;
+}
+
+.button {}
+
+#slide-list {
+    width: 1020px;
+    height: 357px;
+}
+
+.calendar {
+    display: inline-block;
+    /*
+    background-image: url(../img/bg.png);
+*/
+    
+    background-image: url(images/dayslide.png);
+    width: 340px;
+    height: 357px;
     right: -37.7%;
     bottom: 0%;
 }
 
-#day_slider {
+#calendar_1 {
+    /*position: absolute;
+    right: -17.7%;
+    bottom: 0%;*/
+    
+    float: left;
+}
+
+#calendar_2 {
+    /* position: absolute;
+    right: -75%;
+    bottom: 0%;*/
+    
+    float: left;
+}
+
+#calendar_3 {
+    /* position: absolute;
+    right: -112.3%;
+    bottom: 0%;*/
+    
+    float: left;
+}
+
+#slide-list {
+    display: inline-block;
+}
+
+.day_slider {
     background-color: #227e9c;
     width: 340px;
     height: 61px;
 }
 
-#day {
-    position: absolute;
+.day {
+    margin-left: 32%;
     font-family: ThinHelvetica;
     color: #ffffff;
     font-size: 30px;
     left: 33%;
 }
 
-#date {
+.date {
     margin: 100px;
     font-family: ThinHelvetica;
     color: #227e9c;
     font-size: 160.01px;
     text-align: center;
+    margin-top: 40%;
 }
 
-#month {
+.month {
     font-family: HelveticaCyr300;
     color: #1f7998;
     font-size: 48px;
@@ -128,7 +179,7 @@ header {
     margin: 50px;
 }
 
-#today {
+.today {
     font-family: HelveticaCyr;
     color: rgba(230, 74, 25, 0.7);
     font-size: 18px;
@@ -136,7 +187,7 @@ header {
     margin-top: 6px;
 }
 
-.arrows_slider {
+.button {
     position: absolute;
     top: 7%;
 }
@@ -147,6 +198,31 @@ header {
 
 #right_arrow {
     right: 15%;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -2%;
+    left: 30%;
+}
+
+.carousel-indicators li {
+   display: inline-block;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #44b1d5;
+    box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.05);
+    width: 12px;
+    height: 12px;
+}
+
+.carousel-indicators .active {
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 1, 0.2);
+    width: 12px;
+    height: 12px;
+    margin: 5px;
 }
 
 #time_of_day {
@@ -189,7 +265,6 @@ hr {
     background-color: #023b5b;
     color: #023b5b;
 }
-
 /*#time_of_day .daytimes {
    
     margin-right: 50px;
@@ -197,18 +272,17 @@ hr {
     margin-top: 50px;
 }*/
 
-#daytimes_inline article{
+#daytimes_inline article {
     display: inline-block;
     margin-right: 80px;
     margin-left: 150px;
     margin-top: 50px;
 }
 
-#daytimes_inline section{
+#daytimes_inline section {
     display: inline-block;
     margin-left: 135px;
     margin-right: 50px;
-    
 }
 
 .daytimes {
