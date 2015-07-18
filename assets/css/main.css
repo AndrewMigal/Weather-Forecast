@@ -155,11 +155,12 @@ header {
 }
 
 .day {
-    margin-left: 32%;
+    /*margin-left: 35%;*/
     font-family: ThinHelvetica;
     color: #ffffff;
     font-size: 30px;
-    left: 33%;
+    /*left: 33%;*/
+    text-align: center;
 }
 
 .date {
