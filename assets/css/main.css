@@ -120,7 +120,7 @@ header {
     bottom: 0%;
 }
 
-#calendar_1 {
+#calendar_0 {
     /*position: absolute;
     right: -17.7%;
     bottom: 0%;*/
@@ -128,7 +128,7 @@ header {
     float: left;
 }
 
-#calendar_2 {
+#calendar_1 {
     /* position: absolute;
     right: -75%;
     bottom: 0%;*/
@@ -136,7 +136,7 @@ header {
     float: left;
 }
 
-#calendar_3 {
+#calendar_2 {
     /* position: absolute;
     right: -112.3%;
     bottom: 0%;*/
@@ -282,7 +282,7 @@ hr {
 
 #daytimes_inline section {
     display: inline-block;
-    margin-left: 135px;
+    margin-left: 155px;
     margin-right: 50px;
 }
 
@@ -298,3 +298,4 @@ hr {
 .p_img {
     display: inline;
 }
+
