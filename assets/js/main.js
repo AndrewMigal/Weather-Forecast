@@ -73,6 +73,9 @@ $(function () {
         animateSlider((isBackBtn ? imageWidth : (-1) * imageWidth), 1000);
         addDayWeather(cache, localTime, active_position);
         changeBackground();
+        if (active_position === 0) {
+        addWeather(cache5, localTime5);
+        }
     });
 
 
@@ -96,7 +99,10 @@ $(function () {
         console.log(active_position);
         animateSlider(shift * imageWidth, 1000);
         addDayWeather(cache, localTime, active_position);
-        changeBackground();                
+        changeBackground();   
+        if (active_position === 0) {
+        addWeather(cache5, localTime5);
+        }
         /*
                 animateSlider(340, 1000);
         */
@@ -138,7 +144,7 @@ $(function () {
 
         });
 
-        var cache = JSON.parse(localStorage.weatherCache);
+         cache5 = JSON.parse(localStorage.weatherCache);
         /*console.log(cache.data.city.name);
         $("#city").html(cache.data.city.name);
         console.log(cache.data.list[0].dt_txt);
@@ -150,7 +156,7 @@ $(function () {
         */
         var d = new Date();
         var offset = -d.getTimezoneOffset() * 60 * 1000;
-        var localTime = new Date(cache.data.list[0].dt * 1000 - offset);
+         localTime5 = new Date(cache5.data.list[0].dt * 1000 - offset);
         /*console.log(moment(localTime).format('MMMM'));
         console.log(moment(localTime).format('dddd'));
         console.log(moment(localTime).format('D'));*/
@@ -166,7 +172,7 @@ $(function () {
             console.log(cache.data.list[1].dt_txt);
             console.log(cache.data.list[2].dt_txt == "2015-07-20 18:00:00");*/
         
-for (k = 0; k < 8; k++) {
+/*for (k = 0; k < 8; k++) {
     console.log(cache.data.list[k].dt_txt);
      if (cache.data.list[k].dt_txt.split(/\s/)[1] == "09:00:00") {
         $('#morntempimg').attr("src", "assets/img/img_small/" + cache.data.list[k].weather[0].icon + ".png");
@@ -181,14 +187,14 @@ for (k = 0; k < 8; k++) {
    
     else if (cache.data.list[k].dt_txt.split(/\s/)[1] == "03:00:00")
         break;
-    //myThing.action();
     
-}
-        console.log(k);
+    
+}*/
+        //console.log(k);
         
         
         //console.log(moment(localTime).format('h:mm a'));
-            addWeather(cache, localTime);
+            addWeather(cache5, localTime5);
         
         /*switch ($("#precipitation").attr("src")) {
         case "assets/img/01n.png":
@@ -352,24 +358,24 @@ for (k = 0; k < 8; k++) {
         //$("#time").html(moment(localTime(active_position)).format('h:mm a'));
         $("#time").html("");
         $("#precipitation").attr("src", "assets/img/" + cache.data.list[active_position].weather[0].icon + ".png");
-            $('#morntempimg').attr("src", "");
+            /*$('#morntempimg').attr("src", "");
              $('#daytempimg').attr("src", "");
             $('#evetempimg').attr("src", "");
-            $('#nighttempimg').attr("src", "");
+            $('#nighttempimg').attr("src", "");*/
         } 
 
         $("#morntemp").html(parseInt(cache.data.list[active_position].temp.morn) + "&deg;");
         //console.log(parseInt(cache.data.list[active_position].temp.morn));
-        //$('#morntempimg').attr("src", "assets/img/img_small/" + cache.data.list[active_position].weather[0].icon + ".png");
+        $('#morntempimg').attr("src", "assets/img/img_small/" + cache.data.list[active_position].weather[0].icon + ".png");
 
         $("#daytemp").html(parseInt(cache.data.list[active_position].temp.day) + "&deg;");
-        //$('#daytempimg').attr("src", "assets/img/img_small/" + cache.data.list[active_position].weather[0].icon + ".png");
+        $('#daytempimg').attr("src", "assets/img/img_small/" + cache.data.list[active_position].weather[0].icon + ".png");
 
         $("#evetemp").html(parseInt(cache.data.list[active_position].temp.eve) + "&deg;");
-        //$('#evetempimg').attr("src", "assets/img/img_small/" + cache.data.list[active_position].weather[0].icon + ".png");
+        $('#evetempimg').attr("src", "assets/img/img_small/" + cache.data.list[active_position].weather[0].icon + ".png");
 
         $("#nighttemp").html(parseInt(cache.data.list[active_position].temp.night) + "&deg;");
-        //$('#nighttempimg').attr("src", "assets/img/img_small/" + cache.data.list[active_position].weather[0].icon + ".png");
+        $('#nighttempimg').attr("src", "assets/img/img_small/" + cache.data.list[active_position].weather[0].icon + ".png");
 
         for (var i = 0; i < 3; i++) {
             $("#calendar_" + active_position + " .day").html(moment(localTime(active_position)).format('dddd'));
